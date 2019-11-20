@@ -26,6 +26,7 @@ You can change USER and PASSWORD.
 docker run --rm -p 2222:8787 -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
 ```
 
+
 # 3a. To use rstudio in your browser
 
 Go to http://localhost:2222.
@@ -36,11 +37,25 @@ PASSWORD=secret
 # 3b. Alternatively, to use R in the terminal
 
 ```
-docker run --rm -it -v $(pwd):/home/rstudio/fco/ chumbleycode/fco:latest R
+docker run --rm -it chumbleycode/fco:latest R
 ````
 
 # 4. Play with the example analysis script
 
 A simple example script is in fco/R/example_analysis.R
 
+
+# Alternatives to 3a/3b: Running container with local volume
+
+To additionally bind mount your local folder, first navigate to your folder then,
+
+```
+docker run --rm -p 2222:8787  -v $(pwd):/home/rstudio/fco/ -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
+```
+
+or
+
+```
+docker run --rm -it -v $(pwd):/home/rstudio/fco/ chumbleycode/fco:latest R
+````
 
