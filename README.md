@@ -23,7 +23,7 @@ For more information see: https://hub.docker.com/repository/docker/chumbleycode/
 You can change USER and PASSWORD.
 
 ```
-docker run --rm -v $(pwd):/home/rstudio/fco/ -p 2222:8787 -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
+docker run --rm -p 2222:8787 -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
 ```
 
 # 3a. To use rstudio in your browser
