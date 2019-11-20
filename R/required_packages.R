@@ -1,0 +1,5 @@
+devtools::install_github("Jaeoc/lmhyp")
+install.packages("combinat")
+#install.packages("stringr")
+#install.packages("stringi")
+install.packages("ggformula")
