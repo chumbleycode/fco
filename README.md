@@ -48,6 +48,6 @@ docker run -d --rm -p 2222:8787 -v `pwd`:/home/rstudio/fco/working -e PASSWORD=r
 or
 
 ```
-docker run --rm -it v /full/path/to/myfolder/:/home/rstudio/fco/myfolder/ chumbleycode/fco:latest R
+docker run --rm -it v test:/home/rstudio/fco/myfolder/ chumbleycode/fco:latest R
 ````
 
