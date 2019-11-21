@@ -37,12 +37,12 @@ docker run --rm -it chumbleycode/fco:latest R
 A simple example script is in fco/R/example_analysis.R
 
 
-# Alternatives to 2a/2b: Running container with local volume
+# Alternatives to 2a/2b: Running container with local volume and root access
 
 If you want to use the functionality on own data, you must additionally bind mount your local folder. First use the shell to navigate to your data folder then - for shell or browser access - run either 
 
 ```
-docker run --rm -p 2222:8787  -v /full/path/to/myfolder/:/home/rstudio/fco/myfolder/ -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
+docker run -d --rm -p 2222:8787 -v `pwd`:/home/rstudio/fco/working -e PASSWORD=rstudio -e ROOT=TRUE chumbleycode/fco:latest
 ```
 
 or
