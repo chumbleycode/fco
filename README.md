@@ -42,14 +42,13 @@ A simple example script is in fco/R/example_analysis.R
 If you want to use the functionality on own data, you must additionally bind mount your local folder. First use the shell to navigate to your data folder then - for shell or browser access - run either 
 
 ```
-docker run --rm -e USER=guest -e PASSWORD=secret -p 2333:8787 -v $(pwd):/home/rstudio/fco/ chumbleycode/fco:latest
-docker run -p 2342:8787 -e PASSWORD=e -v `pwd`:/home/rstudio/fco/ chumbleycode/fco:latest
+docker run --rm -p 2222:8787 -e PASSWORD=secret -v $(pwd):/home/rstudio/fco/host -e ROOT=TRUE chumbleycode/fco:latest
 ```
 
 or
 
 ```
-docker run -it -v $(pwd):/home/rstudio/fco/ chumbleycode/fco:latest R
+docker run -it -v $(pwd):/home/rstudio/fco/host chumbleycode/fco:latest R
 ````
 
 
