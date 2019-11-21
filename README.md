@@ -1,4 +1,4 @@
-n example analysis using Bayesian parameter ranking
+A simple example analysis using Bayesian parameter ranking
 
 * For the working paper see [here](https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf).
 * The simple example, in "/home/rstudio/fco/R" does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
