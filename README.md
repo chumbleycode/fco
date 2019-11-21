@@ -1,7 +1,7 @@
 # An example analysis using Bayesian parameter ranking
 
 * For the working paper see [here](https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf).
-* The simple example, in /local/ does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
+* The simple example, in "/home/rstudio/fco/R" does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
 * For related work, see [my website](https://chumbleycode.github.io).
 
 # 1. Pull docker image 
