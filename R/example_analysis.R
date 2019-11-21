@@ -13,7 +13,7 @@ dat    = readRDS("data/example_dataset.rds")
 object = list(model = lm(y~ . - 1, data = select(dat, matches("y|w"))))
 
 # preparation
-nme  = map(object, coef) %>% map(names) 
+nme  = map(object, coef) %>% map(names)
 prep = get_hyp(nme, only_order_hyps = T)
 
 # estimate posterior for each full rank
@@ -27,3 +27,4 @@ fco     = find_local_fco(partial_rank = max_rnk,
 fco
 
 # Example using MCMC
+
