@@ -26,5 +26,4 @@ fco     = find_local_fco(partial_rank = max_rnk,
                          dat          = post[[1]])
 fco
 
-# Example using MCMC
-ok for the last time i am inside
+# Example using MCMC 
