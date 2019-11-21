@@ -5,10 +5,6 @@
 * For related work, see [my website](https://chumbleycode.github.io).
 * If you are new to docker see [here](https://chumbleycode.github.io/fco_docker.html).
 
-# 0. Install docker (if you don't yet have it)
-
-Open an account at [docker hub](https://hub.docker.com/). Then follow installation instructions.
-
 # 1. Get docker image 
 
 ```
@@ -50,12 +46,12 @@ A simple example script is in fco/R/example_analysis.R
 To additionally bind mount your local folder, first navigate to your folder then,
 
 ```
-docker run --rm -p 2222:8787  -v $(pwd):/home/rstudio/fco/ -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
+docker run --rm -p 2222:8787  -v /full/path/to/myfolder/:/home/rstudio/fco/myfolder/ -e USER=guest -e PASSWORD=secret chumbleycode/fco:latest
 ```
 
 or
 
 ```
-docker run --rm -it -v $(pwd):/home/rstudio/fco/ chumbleycode/fco:latest R
+docker run --rm -it -v /full/path/to/myfolder/:/home/rstudio/fco/myfolder/ chumbleycode/fco:latest R
 ````
 
