@@ -1,0 +1,18 @@
+#!/bin/bash
+USER="teehee"
+PASSWORD="lol"
+
+CODE=$(pwd)
+DATA="/Volumes/Share/preprocess/"
+CONTAINER_NAME="fco_shell"
+PORT="1234"
+
+docker run -it --rm \
+  -v $CODE:/workspace/code \
+  -v $DATA:/workspace/data \
+  -e USER=$USER \
+  -e PASSWORD=$PASSWORD \
+  -e PROJECT_NAME=$PROJECT_NAME \
+  --name $CONTAINER_NAME \
+  chumbleycode/fco:latest \
+  bash

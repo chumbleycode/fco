@@ -3,13 +3,13 @@ USER="chumbley"
 PASSWORD="lol"
 
 CODE=$(pwd)
-DATA=$(pwd)
-CONTAINER_NAME="fco"
-PORT="2234"
+DATA="/Volumes/Share/preprocess/" 
+CONTAINER_NAME="fco_browser"
+PORT="2233"
 
 docker run -d --rm \
-  -v $CODE:/home/fco/workspace/code \
-  -v $DATA:/home/fco/workspace/data \
+  -v $CODE:/home/rstudio/fco/workspace/code \
+  -v $DATA:/home/rstudio/fco/workspace/data \
   -p $PORT:8787 \
   -e USER=$USER \
   -e PASSWORD=$PASSWORD \

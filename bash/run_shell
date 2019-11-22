@@ -1,10 +1,10 @@
 #!/bin/bash
-USER="chumbley"
+USER="teehee"
 PASSWORD="lol"
 
 CODE=$(pwd)
-DATA=$(pwd)
-CONTAINER_NAME="fco"
+DATA="/Volumes/Share/preprocess/"
+CONTAINER_NAME="fco_interactive"
 PORT="1234"
 
 docker run -it --rm \
