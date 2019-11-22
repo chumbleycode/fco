@@ -1,5 +1,6 @@
-A simple example analysis using Bayesian parameter ranking
+# A simple example analysis using Bayesian parameter ranking
 
+* The docker image is hosted [here](https://hub.docker.com/repository/docker/chumbleycode/fco).
 * For the working paper see [here](https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf).
 * The simple example, in "/home/rstudio/fco/R" does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
 * For related work, see [my website](https://chumbleycode.github.io).
@@ -11,8 +12,6 @@ Run the following from the shell:
 ```
 docker pull chumbleycode/fco:latest
 ```
-
-For more information see: https://hub.docker.com/repository/docker/chumbleycode/fco
 
 # 2a. To open container with rstudio in your browser
 
@@ -50,5 +49,3 @@ or
 ```
 docker run -it -v $(pwd):/home/rstudio/fco/host chumbleycode/fco:latest R
 ````
-
-
