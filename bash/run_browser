@@ -5,7 +5,7 @@ PASSWORD="lol"
 CODE=$(pwd)
 DATA="/Volumes/Share/preprocess/" 
 CONTAINER_NAME="fco_browser"
-PORT="2233"
+PORT="2235"
 
 docker run -d --rm \
   -v $CODE:/home/rstudio/fco/workspace/code \
@@ -13,7 +13,6 @@ docker run -d --rm \
   -p $PORT:8787 \
   -e USER=$USER \
   -e PASSWORD=$PASSWORD \
-  -e PROJECT_NAME=$PROJECT_NAME \
   --name $CONTAINER_NAME \
   chumbleycode/fco:latest
 
