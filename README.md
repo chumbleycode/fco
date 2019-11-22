@@ -2,7 +2,7 @@
 
 * The docker image is hosted [here](https://hub.docker.com/repository/docker/chumbleycode/fco).
 * The simple example, in the directory /fco/R does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
-* Some useful shortcuts for shell docker commands are in directory /fco/bash.
+* Some useful bash scripts for shortcuts of docker commands are in directory /fco/bash.
 * The submitted manuscript is [here](https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf). If you publish with this method, please cite the paper as: 
 
  *Chumbley JR (2019) A Bayesian credible set for ranking parameters by relative magnitude. Manuscript submitted for publication. https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf*
