@@ -1,11 +1,12 @@
 # A simple example analysis using Bayesian parameter ranking
 
 * The docker image is hosted [here](https://hub.docker.com/repository/docker/chumbleycode/fco).
+* The simple example, in "/fco/R" does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
+* Some useful shortcuts for shell docker commands are in "/fco/bash".
 * The submitted manuscript is [here](https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf). If you publish with this method, please cite the paper as: 
 
  *Chumbley JR (2019) A Bayesian credible set for ranking parameters by relative magnitude. Manuscript submitted for publication. https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf*
 
-* The simple example, in "/home/rstudio/fco/R" does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
 * For related work, see [my website](https://chumbleycode.github.io). For example, 
 
  *Chumbley, J.R., Potente, C., Xu, W., & Shanahan, M. (2019) A Bayesian approach to life course epidemiology. Manuscript submitted for publication. https://chumbleycode.github.io/docs/papers_reports/range_apa.pdf*
