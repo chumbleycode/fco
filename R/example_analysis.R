@@ -2,7 +2,7 @@ library(tidyverse)
 library(lmhyp)
 library(ggformula)
 library(stringi)
-source("R/rank_dummy_example/pkg.R") # a minimal "package"
+source("R/pkg.R") # a minimal "package"
 
 # data simulated to have rank: w1|w4|w3|w5|w2
 dat    = readRDS("R/rank_dummy_example/example_dataset.rds")
