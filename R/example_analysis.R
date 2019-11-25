@@ -5,7 +5,7 @@ library(stringi)
 source("R/pkg.R") # a minimal "package"
 
 # data simulated to have rank: w1|w4|w3|w5|w2
-dat    = readRDS("R/rank_dummy_example/example_dataset.rds")
+dat    = readRDS("data/example_dataset.rds")
 
 # estimate linear model
 object = list(model = lm(y~ . - 1, data = select(dat, matches("y|w"))))
@@ -22,4 +22,4 @@ post  = tidy_det(prior = prep, post = post) # TIDY output
 max_rnk = get_fco_det(post)$H # extract max full rank
 fco     = find_local_fco(partial_rank = max_rnk,
                          dat          = post[[1]])
-fco
+print(fco)
