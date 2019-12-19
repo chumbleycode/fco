@@ -116,13 +116,12 @@ find_local_fco =
     probs      = map(coarser, ~filter(dat, H %in% .x)) %>% map(summarise, sum(Hp)) 
     max_prob   = max(unlist(probs))
     max_event  = probs %>% keep(~.x == max_prob) %>% names %>% `[[`(1) # the last step in case of multiple max
-    print(c(max_event, max_prob))  
     
     if(max_prob > thresh | !str_detect(max_event, "\\|")){ 
-      print("********************")
       return(c(max_event, max_prob)) 
     } else {  
-      find_local_fco(max_event, dat)
+      rbind(c(max_event, max_prob),
+            find_local_fco(max_event, dat))
     } 
   }
 
@@ -147,4 +146,16 @@ get_coarse_wux = function(obj){
   
   qqq = set_names(qqq, naaa)
   return(qqq = qqq)
+}
+
+
+tidy_output = function(max_rnk, fco){
+  # eats the max probability full rank, and the output from find_local_fco()
+  # returns a tidy tibble
+  
+  rbind(c(V1 = max_rnk$H,
+          V2 = max_rnk$Hp),
+        fco) %>% 
+    as_tibble %>% 
+    transmute(H = V1, prob = signif(as.numeric(V2), 3))
 }
