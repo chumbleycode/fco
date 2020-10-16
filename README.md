@@ -1,6 +1,7 @@
 # A simple example analysis using Bayesian parameter ranking
 
 * The docker image is hosted [here](https://hub.docker.com/repository/docker/chumbleycode/fco).
+* A permanent citable code archive here: [![DOI](https://zenodo.org/badge/222989575.svg)](https://zenodo.org/badge/latestdoi/222989575)
 * The simple example, in the directory /fco/R does linear regression then asks for the most detailed but plausible ordering of parameters (by magnitude).
 * Some useful bash scripts for shortcuts of docker commands are in directory /fco/bash.
 * The submitted manuscript is [here](https://chumbleycode.github.io/docs/papers_reports/fcr_apa.pdf). If you publish with this method, please cite the paper as: 
