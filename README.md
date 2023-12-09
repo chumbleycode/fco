@@ -14,7 +14,7 @@
 
 # 1. Pull docker image 
 
-Run the following from the shell:
+Run the following from shell:
 
 ```
 docker pull chumbleycode/fco:latest
